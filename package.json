@@ -1,0 +1,57 @@
+{
+  "name": "snippet-collection",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
+    "lint:prettier": "prettier --check .",
+    "lint": "yarn lint:js && yarn lint:prettier",
+    "lint:fix": "prettier --write --list-different . && yarn lint:js --fix",
+    "prepare": "husky install"
+  },
+  "repository": "https://github.com/massCodeIO/snippet-collection",
+  "author": {
+    "name": "Anton Reshetov",
+    "url": "https://github.com/antonreshetov"
+  },
+  "lint-staged": {
+    "*.{js,vue}": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "@nuxt/content": "^1.15.1",
+    "core-js": "^3.19.3",
+    "nuxt": "^2.15.8",
+    "vue": "^2.6.14",
+    "vue-server-renderer": "^2.6.14",
+    "vue-template-compiler": "^2.6.14",
+    "webpack": "^4.46.0"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.16.3",
+    "@commitlint/cli": "^15.0.0",
+    "@commitlint/config-conventional": "^15.0.0",
+    "@nuxtjs/eslint-config": "^8.0.0",
+    "@nuxtjs/eslint-module": "^3.0.2",
+    "@vue/eslint-config-standard": "^7.0.0",
+    "eslint": "^8.4.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-n": "^15.2.4",
+    "eslint-plugin-nuxt": "^3.1.0",
+    "eslint-plugin-vue": "^8.2.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.2",
+    "prettier": "^2.5.1",
+    "sass": "^1.53.0"
+  },
+  "volta": {
+    "node": "16.16.0"
+  }
+}
