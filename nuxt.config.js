@@ -1,3 +1,5 @@
+import { FileSystemIconLoader } from 'unplugin-icons/loaders'
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -34,7 +36,23 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module'
+    // '@nuxtjs/eslint-module',
+    [
+      'unplugin-icons/nuxt',
+      {
+        customCollections: {
+          unicons: FileSystemIconLoader(
+            './node_modules/@iconscout/unicons/svg/line'
+          )
+        },
+        iconCustomizer (collection, icon, props) {
+          if (collection === 'unicons') {
+            props.height = '24px'
+            props.width = '24px'
+          }
+        }
+      }
+    ]
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
