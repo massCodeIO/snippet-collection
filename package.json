@@ -26,8 +26,14 @@
     ]
   },
   "dependencies": {
+    "@codemirror/autocomplete": "^6.0.4",
+    "@codemirror/lang-css": "^6.0.0",
+    "@codemirror/lang-html": "^6.1.0",
+    "@codemirror/theme-one-dark": "^6.0.0",
+    "@emmetio/codemirror6-plugin": "^0.1.1",
     "@iconscout/unicons": "^4.0.1",
     "@nuxt/content": "^1.15.1",
+    "codemirror": "^6.0.1",
     "core-js": "^3.19.3",
     "nuxt": "^2.15.8",
     "vue": "^2.6.14",
