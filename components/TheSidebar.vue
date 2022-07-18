@@ -1,6 +1,7 @@
 <template>
   <aside class="sidebar">
     <SidebarCategoryList />
+    <CarbonAd />
   </aside>
 </template>
 
