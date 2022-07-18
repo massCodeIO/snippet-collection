@@ -18,7 +18,8 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: 'Community-driven snippet collection'
+        content:
+          'Community-driven ready to use snippet collection of HTML & CSS'
       },
       { name: 'format-detection', content: 'telephone=no' },
       {
@@ -31,7 +32,8 @@ export default {
       { property: 'og:title', content: 'massCode snippet collection' },
       {
         property: 'og:description',
-        content: 'Community-driven snippet collection'
+        content:
+          'Community-driven ready to use snippet collection of HTML & CSS'
       },
       { property: 'og:image', content: 'https://masscode.io/fb-image.png' },
       // Twitter
@@ -40,7 +42,8 @@ export default {
       { property: 'twitter:title', content: 'massCode snippet collection' },
       {
         property: 'twitter:description',
-        content: 'Community-driven snippet collection'
+        content:
+          'Community-driven ready to use snippet collection of HTML & CSS'
       },
       {
         property: 'twitter:image',
