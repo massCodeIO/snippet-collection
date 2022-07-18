@@ -12,10 +12,8 @@ export default {
 
   methods: {
     load () {
-      const id =
-        process.env.NODE_ENV === 'development'
-          ? 'CVAIKKQM&placement=carbonadsnet'
-          : 'CE7DEKQM&placement=masscodeio'
+      if (process.env.NODE_ENV === 'development') return
+      const id = 'CE7DEKQM&placement=masscodeio'
       const s = document.createElement('script')
       s.id = '_carbonads_js'
       s.src = `//cdn.carbonads.com/carbon.js?serve=${id}`
