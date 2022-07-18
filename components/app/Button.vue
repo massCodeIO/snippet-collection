@@ -1,5 +1,9 @@
 <template>
-  <div class="app-button" :class="{ 'is-primary': type === 'primary' }">
+  <div
+    class="app-button"
+    :class="{ 'is-primary': type === 'primary' }"
+    v-on="$listeners"
+  >
     <slot />
   </div>
 </template>
