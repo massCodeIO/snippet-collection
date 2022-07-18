@@ -20,6 +20,10 @@ export default {
         ? this.snippets
         : this.snippets.filter((i) => i.category === this.$route.query.category)
     }
+  },
+
+  created () {
+    this.$ga.page(this.$route)
   }
 }
 </script>

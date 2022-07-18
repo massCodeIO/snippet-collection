@@ -28,6 +28,7 @@ specifiers:
   sass: ^1.53.0
   unplugin-icons: ^0.14.7
   vue: ^2.6.14
+  vue-analytics: ^5.22.1
   vue-server-renderer: ^2.6.14
   vue-template-compiler: ^2.6.14
   webpack: ^4.46.0
@@ -44,6 +45,7 @@ dependencies:
   core-js: 3.23.4
   nuxt: 2.15.8_vue@2.7.6
   vue: 2.7.6
+  vue-analytics: 5.22.1
   vue-server-renderer: 2.7.6
   vue-template-compiler: 2.7.6
   webpack: 4.46.0
@@ -11134,6 +11136,11 @@ packages:
 
   /vm-browserify/1.1.2:
     resolution: {integrity: sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==}
+    dev: false
+
+  /vue-analytics/5.22.1:
+    resolution: {integrity: sha512-HPKQMN7gfcUqS5SxoO0VxqLRRSPkG1H1FqglsHccz6BatBatNtm/Vyy8brApktZxNCfnAkrSVDpxg3/FNDeOgQ==}
+    deprecated: Sorry but vue-analytics is no longer maintained. I would suggest you switch to vue-gtag, with love, the guy who made the package.
     dev: false
 
   /vue-client-only/2.1.0:
