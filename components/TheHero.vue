@@ -1,6 +1,6 @@
 <template>
   <div class="hero">
-    <h1>Community-driven<br>snippet collection</h1>
+    <h1>Community-driven<br>snippet collection of<br>HTML & CSS</h1>
     <p>Copy / Past / Edit</p>
   </div>
 </template>
