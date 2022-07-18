@@ -65,7 +65,9 @@ export default {
   content: {},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    transpile: ['@emmetio/codemirror6-plugin']
+  },
   generate: {
     async routes () {
       const { $content } = require('@nuxt/content')
