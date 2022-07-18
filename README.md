@@ -7,6 +7,20 @@
 - Copy / Edit.
 - If you like the project, give it a star. It means a lot to the people maintaining it.
 
+## Development
+
+```bash
+# Install dependencies
+pnpm i
+# or
+npm i
+
+# Start dev
+pnpm run dev
+# or
+npm run dev
+```
+
 ## Contribute
 
 To add new snippet
@@ -18,6 +32,6 @@ To add new snippet
 
 ## Licence
 
-[ CC-BY-4.0](https://github.com/massCodeIO/snippet-collection/blob/master/LICENSE)
+[CC-BY-4.0](https://github.com/massCodeIO/snippet-collection/blob/master/LICENSE)
 
 Copyright (c) 2019-present, [Anton Reshetov](https://github.com/antonreshetov).
