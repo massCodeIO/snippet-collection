@@ -49,10 +49,14 @@ export default {
           margin: 0;
         }`
 
+      const importCss = this.css.match(/^@import.*/gm)
+
       this.srcDoc = `
         <html>
           <body>${this.html || htmlDefault}<body>
-          <style>${cssDefault + this.css}<style>
+          <style>${importCss ? importCss.join() : ''}${
+        cssDefault + this.css
+      }<style>
         </html>`
     }
   }
