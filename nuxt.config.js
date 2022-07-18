@@ -1,5 +1,7 @@
 import { FileSystemIconLoader } from 'unplugin-icons/loaders'
 
+const isDev = process.env.NODE_ENV === 'development'
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -96,6 +98,9 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     transpile: ['@emmetio/codemirror6-plugin']
+  },
+  router: {
+    base: isDev ? '/' : '/snippets'
   },
   generate: {
     async routes () {
