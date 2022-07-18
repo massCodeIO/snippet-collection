@@ -6,15 +6,44 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'masscode-snippet-nuxt2',
+    title: 'massCode snippet collection',
     htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Community-driven snippet collection'
+      },
+      { name: 'format-detection', content: 'telephone=no' },
+      {
+        name: 'google-site-verification',
+        content: 'h-rU1tSutO83wOyvi4syrk_XTvgennlUPkL6fMmq5cI'
+      },
+      // FB
+      { property: 'og:type', content: 'website' },
+      { property: 'og:url', content: 'https://masscode.io' },
+      { property: 'og:title', content: 'massCode snippet collection' },
+      {
+        property: 'og:description',
+        content: 'Community-driven snippet collection'
+      },
+      { property: 'og:image', content: 'https://masscode.io/fb-image.png' },
+      // Twitter
+      { property: 'twitter:card', content: 'summary_large_image' },
+      { property: 'twitter:url', content: 'https://masscode.io' },
+      { property: 'twitter:title', content: 'massCode snippet collection' },
+      {
+        property: 'twitter:description',
+        content: 'Community-driven snippet collection'
+      },
+      {
+        property: 'twitter:image',
+        content: 'https://masscode.io/tw-image.png'
+      }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
