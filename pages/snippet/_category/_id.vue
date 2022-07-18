@@ -75,6 +75,10 @@ export default {
   grid-template-columns: repeat(2, 1fr);
   gap: var(--spacing-sm);
   margin-top: var(--spacing-sm);
+  @media (max-width: 600px) {
+    display: flex;
+    flex-flow: column;
+  }
 }
 .preview {
   position: relative;

@@ -23,9 +23,15 @@ export default {
   justify-content: center;
   text-align: center;
   padding: calc(var(--spacing-xl) * 2) 0;
+  @media (max-width: 600px) {
+    padding-bottom: var(--spacing-xl);
+  }
   h1 {
     font-size: 48px;
     margin-bottom: 0;
+    @media (max-width: 600px) {
+      font-size: 28px;
+    }
   }
   p {
     font-size: 16px;

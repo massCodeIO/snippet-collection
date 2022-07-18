@@ -92,11 +92,12 @@ export default {
   line-height: 0;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 759px) {
+@media only screen and (min-width: 320px) and (max-width: 600px) {
   .carbon {
     position: relative;
     float: none;
-    max-width: 330px;
+    max-width: unset;
+    width: 300px;
     margin: 0 auto;
     margin-top: 20px;
   }

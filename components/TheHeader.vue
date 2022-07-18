@@ -6,7 +6,7 @@
           <NuxtLink to="/">
             <div class="logo">
               <img src="~/assets/img/logo.png" alt="">
-              massCode
+              <span v-if="width > 600"> massCode </span>
             </div>
           </NuxtLink>
         </div>
@@ -18,7 +18,8 @@
               rel="noopener noreferrer"
             >
               <AppButton type="primary" class="add-new">
-                <UniconsPlus /> Contribute
+                <UniconsPlus />
+                <span v-if="width > 600"> Contribute </span>
               </AppButton>
             </a>
             <a href="http://masscode.io" rel="noopener noreferrer">
@@ -55,6 +56,7 @@
 import UniconsPlus from '~icons/unicons/plus'
 import UniconsTwitter from '~icons/unicons/twitter'
 import UniconsGithub from '~icons/unicons/github'
+import { mapState } from 'vuex'
 
 export default {
   name: 'TheHeader',
@@ -67,6 +69,12 @@ export default {
 
   data () {
     return {}
+  },
+
+  computed: {
+    ...mapState({
+      width: (state) => state.width
+    })
   }
 }
 </script>
@@ -119,8 +127,14 @@ header {
     }
     .add-new {
       padding-left: 4px;
+      @media (max-width: 600px) {
+        padding: 2px 6px;
+      }
       :deep(svg) {
         width: 18px;
+        @media (max-width: 600px) {
+          width: 16px;
+        }
       }
     }
   }

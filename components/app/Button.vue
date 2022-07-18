@@ -33,7 +33,6 @@ export default {
   line-height: 24px;
   cursor: pointer;
   font-size: 14px;
-
   &.is-primary {
     background-color: var(--color-primary);
     padding: 4px 8px;
@@ -51,10 +50,12 @@ export default {
       }
     }
   }
-
   &:hover {
     color: var(--color-contrast-low-alt);
     fill: var(--color-contrast-low-alt);
+  }
+  @media (max-width: 600px) {
+    font-size: 12px;
   }
 }
 </style>

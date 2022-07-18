@@ -1,7 +1,8 @@
 import { formatSnippetData } from '@/helpers'
 
 export const state = () => ({
-  snippets: []
+  snippets: [],
+  width: null
 })
 
 export const getters = {
@@ -17,6 +18,9 @@ export const getters = {
 export const mutations = {
   SET_SNIPPETS (state, snippets) {
     state.snippets = snippets
+  },
+  SET_WIDTH (state, width) {
+    state.width = width
   }
 }
 

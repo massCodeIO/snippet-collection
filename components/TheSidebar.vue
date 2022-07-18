@@ -21,5 +21,9 @@ export default {
   top: 100px;
   width: var(--sidebar-width);
   align-self: start;
+  @media (max-width: 600px) {
+    position: unset;
+    margin-bottom: var(--spacing-sm);
+  }
 }
 </style>

@@ -30,6 +30,9 @@ export default {
   .main {
     display: grid;
     grid-template-columns: 250px 1fr;
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
   }
 }
 </style>
