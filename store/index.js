@@ -7,11 +7,17 @@ export const state = () => ({
 
 export const getters = {
   categories (state) {
-    return state.snippets.reduce((acc, i) => {
+    const unordered = state.snippets.reduce((acc, i) => {
       if (!acc[i.category]) acc[i.category] = 0
       acc[i.category] += 1
       return acc
     }, {})
+    return Object.keys(unordered)
+      .sort()
+      .reduce((acc, i) => {
+        acc[i] = unordered[i]
+        return acc
+      }, {})
   }
 }
 
