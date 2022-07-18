@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
     <p>
-      Released under the MIT License.<br>
+      Released under the CC-BY-4.0 License.<br>
       Copyright © 2022 Anton Reshetov
     </p>
   </div>
