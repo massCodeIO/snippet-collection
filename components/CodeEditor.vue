@@ -77,6 +77,7 @@ export default {
 }
 .wrapper {
   position: relative;
+  display: grid;
 }
 .lang {
   position: absolute;
