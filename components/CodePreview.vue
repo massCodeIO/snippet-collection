@@ -63,4 +63,9 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.code-preview {
+  width: 100%;
+  height: 100%;
+}
+</style>
