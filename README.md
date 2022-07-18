@@ -13,7 +13,7 @@ To add new snippet
 
 - Make a fork.
 - Use the [Snippet Template](/snippet-template.md) to add new snippets to the collection.
-- Add the snippet inside `/content` folder to one of the categories: `buttons`, `checkboxes`, `inputs`, `loaders`, `switches` using a template. The file name must be numeric with the increment step.
+- Add the snippet inside `/content` folder to one of the categories: `buttons`, `checkboxes`, `effects`, `inputs`, `loaders`, `switches` using a template. The file name must be numeric with the increment step.
 - Make a PR.
 
 ## Licence
