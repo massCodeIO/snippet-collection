@@ -1,6 +1,7 @@
 <template>
   <div class="footer">
     <p>
+      All snippets tested in Chrome.<br>
       Released under the CC-BY-4.0 License.<br>
       Copyright © 2022 Anton Reshetov
     </p>
