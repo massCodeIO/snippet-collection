@@ -23,7 +23,9 @@ export default {
   },
 
   created () {
-    this.$ga.page(this.$route)
+    this.$ga.page({
+      page: this.$router.options.base + this.$route.path
+    })
   }
 }
 </script>
