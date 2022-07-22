@@ -6,7 +6,6 @@ export const getCodeByLang = (lang = 'html', string) => {
 }
 
 export const formatSnippetData = (data) => {
-  console.log(data)
   return {
     id: data.slug,
     title: data.title,
