@@ -1,10 +1,15 @@
 <template>
-  <div class="snippet-card">
+  <div class="snippet-card" :class="{ 'is-dark': isDark }">
     <div class="header">
       {{ title }}
     </div>
     <div class="body">
-      <CodePreview :css="css" :html="html" />
+      <CodePreview
+        :css="css"
+        :html="html"
+        :is-gray="isGray"
+        :is-dark="isDark"
+      />
     </div>
     <div class="footer">
       <div class="left">
@@ -14,7 +19,8 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          @{{ author }}</a>
+          @{{ author }}
+        </a>
       </div>
       <div class="right">
         <NuxtLink :to="link">
@@ -55,6 +61,14 @@ export default {
     link: {
       type: String,
       default: () => ''
+    },
+    isGray: {
+      type: Boolean,
+      default: false
+    },
+    isDark: {
+      type: Boolean,
+      default: false
     }
   },
 
@@ -69,6 +83,18 @@ export default {
   position: relative;
   border-radius: 10px;
   border: 1px solid var(--color-border);
+  overflow: hidden;
+  &.is-dark {
+    color: #fff;
+    .footer {
+      a {
+        color: #fff;
+      }
+    }
+    :deep(svg) {
+      fill: #fff;
+    }
+  }
   .body {
     display: flex;
     align-items: center;

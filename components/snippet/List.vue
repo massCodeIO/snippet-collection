@@ -8,6 +8,8 @@
       :css="i.css"
       :html="i.html"
       :link="`snippet/${i.category}/${i.id}`"
+      :is-gray="i.isGray"
+      :is-dark="i.isDark"
     />
   </div>
 </template>

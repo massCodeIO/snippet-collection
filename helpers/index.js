@@ -6,6 +6,7 @@ export const getCodeByLang = (lang = 'html', string) => {
 }
 
 export const formatSnippetData = (data) => {
+  console.log(data)
   return {
     id: data.slug,
     title: data.title,
@@ -13,7 +14,9 @@ export const formatSnippetData = (data) => {
     html: getCodeByLang('html', data.text),
     author: data.author,
     date: data.createdAt,
-    category: data.path.split('/')[1]
+    category: data.path.split('/')[1],
+    isGray: data?.isGray || false,
+    isDark: data?.isDark || false
   }
 }
 

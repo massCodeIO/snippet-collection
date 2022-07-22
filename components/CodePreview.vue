@@ -1,5 +1,11 @@
 <template>
-  <div class="code-preview">
+  <div
+    class="code-preview"
+    :class="{
+      'is-dark': isDark,
+      'is-gray': isGray,
+    }"
+  >
     <iframe :srcDoc="srcDoc" frameborder="0" height="100%" width="100%" />
   </div>
 </template>
@@ -16,6 +22,14 @@ export default {
     css: {
       type: String,
       default: () => ''
+    },
+    isGray: {
+      type: Boolean,
+      default: false
+    },
+    isDark: {
+      type: Boolean,
+      default: false
     }
   },
 
@@ -69,5 +83,11 @@ export default {
   height: 100%;
   overflow: hidden;
   border-radius: 10px;
+  &.is-dark {
+    background-color: #282c34 !important;
+  }
+  &.is-gray {
+    background-color: #f4f4f4;
+  }
 }
 </style>

@@ -1,12 +1,17 @@
 <template>
   <div class="snippet">
-    <div class="preview" :class="{ 'is-dark': darkMode }">
+    <div class="preview" :class="{ 'is-dark': isDark }">
       <div class="tools">
         <div class="item">
-          <AppSwitch v-model="darkMode" label-on="Dark" label-off="Light" />
+          <AppSwitch v-model="isDark" label-on="Dark" label-off="Light" />
         </div>
       </div>
-      <CodePreview :html="snippet.html" :css="snippet.css" />
+      <CodePreview
+        :html="snippet.html"
+        :css="snippet.css"
+        :is-gray="snippet.isGray"
+        :is-dark="isDark"
+      />
       <div class="info">
         <a
           :href="`https://github.com/${snippet.author}`"
@@ -47,14 +52,13 @@ export default {
     const snippet = formatSnippetData(data)
 
     return {
-      snippet
+      snippet,
+      isDark: snippet.isDark
     }
   },
 
   data () {
-    return {
-      darkMode: false
-    }
+    return {}
   },
 
   created () {
@@ -92,7 +96,6 @@ export default {
   min-height: 250px;
   grid-column: span 2;
   &.is-dark {
-    background-color: var(--color-dark-mode);
     :deep(.app-switch) {
       color: #fff;
     }

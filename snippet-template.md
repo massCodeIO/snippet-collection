@@ -1,6 +1,8 @@
 ---
 title: Snippet name
 author: GitHub username
+isDark: false
+isGray: false
 ---
 
 ```html
