@@ -1,7 +1,7 @@
 <template>
   <div class="hero">
     <h1>Community-driven<br>snippet collection of<br>HTML & CSS</h1>
-    <p>Copy / Past / Edit</p>
+    <p>Copy / Paste / Edit</p>
   </div>
 </template>
 
