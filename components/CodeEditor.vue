@@ -1,8 +1,15 @@
 <template>
   <div class="wrapper">
     <div ref="editor" class="code-editor" />
-    <div class="lang">
-      {{ mode }}
+    <div class="footer">
+      <div class="action">
+        <AppButton @click="onCopy">
+          <UniconsCopy />
+        </AppButton>
+      </div>
+      <div class="lang">
+        {{ mode }}
+      </div>
     </div>
   </div>
 </template>
@@ -14,9 +21,14 @@ import { css } from '@codemirror/lang-css'
 import { oneDark } from '@codemirror/theme-one-dark'
 import { autocompletion } from '@codemirror/autocomplete'
 import { abbreviationTracker } from '@emmetio/codemirror6-plugin'
+import UniconsCopy from '~icons/unicons/copy'
 
 export default {
   name: 'CodeEditor',
+
+  components: {
+    UniconsCopy
+  },
 
   model: {
     prop: 'value',
@@ -60,6 +72,9 @@ export default {
           })
         ]
       })
+    },
+    async onCopy () {
+      await navigator.clipboard.writeText(this.value)
     }
   }
 }
@@ -79,10 +94,24 @@ export default {
   position: relative;
   display: grid;
 }
-.lang {
+.footer {
   position: absolute;
   right: 0;
   bottom: 0;
+  .action {
+    display: flex;
+    justify-content: flex-end;
+    padding: 4px;
+    :deep(svg) {
+      width: 18px;
+      fill: #fff;
+      &:hover {
+        fill: var(--color-contrast-low);
+      }
+    }
+  }
+}
+.lang {
   background-color: var(--color-primary);
   border-top-left-radius: 10px;
   border-bottom-right-radius: 10px;

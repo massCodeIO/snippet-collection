@@ -18,11 +18,6 @@
           target="_blank"
           rel="noopener noreferrer"
         >@{{ snippet.author }}</a>
-        <div class="actions">
-          <AppButton @click="onCopy">
-            <UniconsCopy />
-          </AppButton>
-        </div>
       </div>
     </div>
     <CodeEditor v-model="snippet.html" mode="html" />
@@ -32,14 +27,9 @@
 
 <script>
 import { formatSnippetData } from '@/helpers'
-import UniconsCopy from '~icons/unicons/copy'
 
 export default {
   name: 'SnippetPage',
-
-  components: {
-    UniconsCopy
-  },
 
   layout: 'page',
 
@@ -65,12 +55,6 @@ export default {
     this.$ga.page({
       page: this.$router.options.base + this.$route.path
     })
-  },
-
-  methods: {
-    async onCopy () {
-      await navigator.clipboard.writeText(this.snippet.html + this.snippet.css)
-    }
   }
 }
 </script>
@@ -98,9 +82,6 @@ export default {
   &.is-dark {
     :deep(.app-switch) {
       color: #fff;
-    }
-    :deep(svg) {
-      fill: #fff;
     }
     .info {
       color: #fff;
