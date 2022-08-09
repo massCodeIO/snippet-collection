@@ -2,10 +2,8 @@
   <div class="wrapper">
     <div ref="editor" class="code-editor" />
     <div class="footer">
-      <div class="action">
-        <AppButton @click="onCopy">
-          <UniconsCopy />
-        </AppButton>
+      <div class="copy" @click="onCopy">
+        Copy
       </div>
       <div class="lang">
         {{ mode }}
@@ -21,14 +19,9 @@ import { css } from '@codemirror/lang-css'
 import { oneDark } from '@codemirror/theme-one-dark'
 import { autocompletion } from '@codemirror/autocomplete'
 import { abbreviationTracker } from '@emmetio/codemirror6-plugin'
-import UniconsCopy from '~icons/unicons/copy'
 
 export default {
   name: 'CodeEditor',
-
-  components: {
-    UniconsCopy
-  },
 
   model: {
     prop: 'value',
@@ -98,18 +91,8 @@ export default {
   position: absolute;
   right: 0;
   bottom: 0;
-  .action {
-    display: flex;
-    justify-content: flex-end;
-    padding: 4px;
-    :deep(svg) {
-      width: 18px;
-      fill: #fff;
-      &:hover {
-        fill: var(--color-contrast-low);
-      }
-    }
-  }
+  display: flex;
+  align-items: flex-end;
 }
 .lang {
   background-color: var(--color-primary);
@@ -119,5 +102,33 @@ export default {
   color: #fff;
   font-size: 12px;
   text-transform: uppercase;
+  z-index: 10;
+}
+.copy {
+  background-color: var(--color-success);
+  padding: 2px var(--spacing-xs);
+  color: #fff;
+  font-size: 12px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  transition: all 0.2s;
+  &:hover {
+    background-color: var(--color-success-hover);
+    &::after {
+      background-color: var(--color-success-hover);
+    }
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    background-color: var(--color-success);
+    height: 100%;
+    width: 30px;
+    top: 0;
+    transition: all 0.2s;
+  }
 }
 </style>
