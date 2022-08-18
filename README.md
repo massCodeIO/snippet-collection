@@ -1,5 +1,7 @@
 # massCode Snippet Collection
 
+> This repository is no longer actual, development of snippets has moved to https://github.com/massCodeIO/masscode.io
+
 Сommunity-driven snippet collection
 
 - Visit [our website](https://masscode.io/snippets) to view our snippet collection.
